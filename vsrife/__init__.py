@@ -583,12 +583,12 @@ def rife(
                     encode_program,
                     encode_inputs,
                     device=device,
-                    enabled_precisions={dtype},
                     num_avg_timing_iters=4,
                     workspace_size=trt_workspace_size,
                     min_block_size=1,
                     max_aux_streams=trt_max_aux_streams,
                     optimization_level=trt_optimization_level,
+                    use_explicit_typing=True,
                 )
 
                 torch_tensorrt.save(encode, encode_engine_path, output_format="torchscript", inputs=encode_inputs)
