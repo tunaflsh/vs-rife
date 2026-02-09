@@ -30,7 +30,7 @@ dependencies = [
   "requests",
   "torch>=2.10.0",
   "tqdm",
-  "VapourSynth>=66",
+  "VapourSynth>=69",
 ]
 
 [project.urls]

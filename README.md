@@ -4,7 +4,7 @@ Real-Time Intermediate Flow Estimation for Video Frame Interpolation, based on h
 
 ## Dependencies
 - [PyTorch](https://pytorch.org/get-started/) 2.10.0 or later
-- [VapourSynth](http://www.vapoursynth.com/) R66 or later
+- [VapourSynth](http://www.vapoursynth.com/) R69 or later
 - [vs-miscfilters-obsolete](https://github.com/vapoursynth/vs-miscfilters-obsolete) (only needed for scene change detection)
 
 `trt` requires additional packages:
