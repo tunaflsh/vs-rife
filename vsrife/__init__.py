@@ -96,7 +96,6 @@ def rife(
     trt_min_shape: list[int] = [128, 128],
     trt_opt_shape: list[int] = [1920, 1080],
     trt_max_shape: list[int] = [1920, 1080],
-    trt_debug: bool = False,
     trt_workspace_size: int = 0,
     trt_max_aux_streams: int | None = None,
     trt_optimization_level: int | None = None,
@@ -127,7 +126,6 @@ def rife(
     :param trt_min_shape:           Min size of dynamic shapes. Ignored if trt_static_shape=True.
     :param trt_opt_shape:           Opt size of dynamic shapes. Ignored if trt_static_shape=True.
     :param trt_max_shape:           Max size of dynamic shapes. Ignored if trt_static_shape=True.
-    :param trt_debug:               Print out verbose debugging information.
     :param trt_workspace_size:      Size constraints of workspace memory pool.
     :param trt_max_aux_streams:     Maximum number of auxiliary streams per inference stream that TRT is allowed to use
                                     to run kernels in parallel if the network contains ops that can run in parallel,
@@ -568,7 +566,6 @@ def rife(
                 flownet_program,
                 flownet_inputs,
                 device=device,
-                debug=trt_debug,
                 num_avg_timing_iters=4,
                 workspace_size=trt_workspace_size,
                 min_block_size=1,
@@ -587,7 +584,6 @@ def rife(
                     encode_inputs,
                     device=device,
                     enabled_precisions={dtype},
-                    debug=trt_debug,
                     num_avg_timing_iters=4,
                     workspace_size=trt_workspace_size,
                     min_block_size=1,
