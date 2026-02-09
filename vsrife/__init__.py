@@ -481,16 +481,6 @@ def rife(
         encode_engine_path = flownet_engine_path + ".encode"
 
         if not os.path.isfile(flownet_engine_path) or (Head is not None and not os.path.isfile(encode_engine_path)):
-            from torch_tensorrt.dynamo.conversion.impl.grid import GridSamplerInterpolationMode
-
-            GridSamplerInterpolationMode.update(
-                {
-                    0: tensorrt.InterpolationMode.LINEAR,
-                    1: tensorrt.InterpolationMode.NEAREST,
-                    2: tensorrt.InterpolationMode.CUBIC,
-                }
-            )
-
             if sys.stdout is None:
                 sys.stdout = open(os.devnull, "w")
 
