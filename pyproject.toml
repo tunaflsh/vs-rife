@@ -28,7 +28,7 @@ classifiers = [
 dependencies = [
   "numpy",
   "requests",
-  "torch>=2.6.0",
+  "torch>=2.10.0",
   "tqdm",
   "VapourSynth>=66",
 ]
